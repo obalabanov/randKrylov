@@ -38,13 +38,13 @@ b = randn(n,1);
 m = 1500;
 fprintf('rand-GMRES... \n');  
 tic
-sol = randgmres(A,b,m,1e-10,1);
+sol = randgmres(A,b,m,1e-9,5);
 toc
 
 % built-in GMRES
 fprintf('built-in-GMRES... \n');  
 tic 
-sol2 = gmres(A,b,m,1e-10,1);
+sol2 = gmres(A,b,m,1e-9,5);
 toc
 
 
