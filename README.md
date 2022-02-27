@@ -71,7 +71,7 @@ The linear systems were taken from [SuiteSparse matrix collection](https://spars
 
 |system       | size |restart | maxit| `gmres` (time) | `gmres` (error) | `randgmres` (time) | `randgmres` (error)|
 | :-------------: | :-------------: |:-------------: | :-------------: |:-------------: | :-------------: |:-------------: | :-------------: |
-|ML_Geer      | 1.5x10<sup>6</sup>|1500  |1 | 2663s | 3x10<sup>-5</sup>  | 1338s |3.4x10<sup>-10</sup>|
+|ML_Geer      | 1.5x10<sup>6</sup>|1500  |5 | 2663s | 3x10<sup>-5</sup>  | 1338s |3.4x10<sup>-10</sup>|
 |Ga41As41H72  | 2.7x10<sup>5</sup>| 2000 | 1 | 945s | 2.7x10<sup>-8</sup>| 320s |6.4x10<sup>-8</sup>|
 |vas_stokes_1M| 1.1x10<sup>6</sup>|800  | 1 |664s | 2.3x10<sup>-13</sup> | 322s |1.3x10<sup>-13</sup>|
 |SiO2         | 1.5x10<sup>5</sup>|400  |5 | 70s | 9.9x10<sup>-11</sup>  | 45s   |2.9x10<sup>-11</sup>|
