@@ -24,7 +24,7 @@ t = open('ML_Geer.mat');
 A = t.Problem.A;
 clear t
 
-m = 100;
+m = 1000;
 maxiter = 50;
 tol = 1e-10;
 K = 20;
