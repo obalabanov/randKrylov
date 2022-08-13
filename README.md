@@ -1,23 +1,14 @@
 # Randomized Krylov methods 
 
-randKrylov is a MATLAB library featuring randomized Krylov methods for the solution of large linear systems and eigenvalue problems.
-So far it contains functions `randgmres` and `randeigs`, which are counterparts of the built-in `gmres` and `eigs`.
+randKrylov is a MATLAB library featuring randomized Krylov methods for solving large linear systems and eigenvalue problems. The functions `randgmres` and `randeigs` can be **over 4 and 10 times faster**, respectively, than the built-in analogues `gmres` and `eigs`, while they are just as (or even more) accurate. 
 
-`randgmres` can provide solutions to linear systems several times faster than 
-the built-in `gmres`. A speedup over `gmres` can be observed when the GMRES method takes 
-many inner iterations: if $m > 10 \log(n)$, where $n$ and $m$, respectively, are the dimension of the 
-system and the number of GMRES inner iterations. Moreover, `randgmres` can be not only more efficient 
-but also more robust than `gmres` in terms of numerical stability, majorly thanks to the new criterion
-for certification of solution. In particular, when `gmres` reports error stagnation, `randgmres` can detect
-this stagnation much sooner, or even detect no stagnation and reduce the error to a greater extent (see the experiments).
+`randgmres` can provide solutions to linear systems several times faster than the built-in `gmres` when the GMRES method takes many inner iterations: 
+if $m > 10 \log(n)$, where $n$ and $m$, respectively, are the dimension of the system and the number of GMRES inner iterations.
+Moreover, `randgmres` can be not only more efficient, but also more robust than `gmres` in terms of numerical stability, mainly due to the new randomized criterion for solution certification. In particular, when `gmres` reports error stagnation, `randgmres` can detect this stagnation much sooner, or even detect the absence of stagnation and reduce the error to a greater extent (see experiments). 
 
-`randeigs` can provide solutions to unsymmetric eigenvalue problems more than **10x** faster than 
-the built-in `eigs`. The speedup is greater when a large Krylov space is used. 
-`randeigs` can compute the solution either with the classical Rayleigh–Ritz approximation, as is done in `eigs`, 
-or randomized Rayleigh–Ritz approximation, which can allow even more reduction of the computational cost but can be slightly less accurate. 
+`randeigs` can provide solutions to unsymmetric eigenvalue problems over 10 times faster than the built-in `eigs`, that are just as accurate. The speedup is greater when a large Krylov space is used. In addition to using the classical Rayleigh-Ritz approximation, as in the built-in eigs, `randeigs` also has the ability to use the randomized Rayleigh-Ritz approximation, which can reduce the computational cost even further. 
 
-An additional distinguishing feature of `randgmres` and `randeigs` is the ability to perform the dominant operations
-in single precision that can halve the memory usage and speed up the computations. 
+An additional distinguishing feature of `randgmres` and `randeigs` is the ability to perform the dominant operations in single precision that can halve the memory usage and speed up the computations.
 
 ## Syntax for randgmres
  `x = randgmres(A,b)` attempts to solve *n* x *n* linear system *Ax* = *b*.
