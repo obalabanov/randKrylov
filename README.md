@@ -11,9 +11,6 @@ The speedup of GMRES iterations is attributed to orthogonalizing Krylov basis wi
 An additional distinguishing feature of `randgmres` and `randeigs` is the ability to perform the dominant operations in single precision that can halve the memory usage and speed up the computations.
 
 ## Syntax for randgmres
- `x = randgmres(A,b)` attempts to solve *n* x *n* linear system *Ax* = *b*.
- By default, we use unrestarted method with *m* = min(*n*/10,500) total
- iterations.
 
  `x = randgmres(A,b)` attempts to solve *n* x *n* linear system *Ax* = *b*.
  By default, we use unrestarted method with *m* = min(*n*/10,500) total
